@@ -1,0 +1,472 @@
+// Variablaes
+$white: rgb(255, 255, 255);
+$black : hsl(0, 0%, 11%);
+$light_black: rgb(85, 85, 85);
+$light_gray: rgb(230, 230, 230);
+
+
+// Fonts
+@font-face {
+    font-family: Open_sans;
+    src: url(/fonts/Open_Sans/OpenSans-Regular.ttf);
+}
+
+@font-face{
+    font-family: Ubuntu;
+    src: url(/fonts/Ubuntu/Ubuntu-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto;
+    src: url(/fonts/Roboto/Roboto-Regular.ttf);
+}
+
+// Global Selectors
+html{
+    font-size: 10px;
+}
+*{
+    
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $black;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: $light_gray;
+    font-family: Open_sans;
+}
+
+
+
+.container{
+    width: 85%;
+    margin: 0 auto;
+}
+
+//Mixins
+
+@mixin center_by_flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Global Selection For this Project
+
+.logo{
+    letter-spacing: -3px;
+    font-size: 2.4rem;
+    font-family: Ubuntu;
+}
+
+.heading{
+    font-size: 2.4rem;
+    color: $black;
+}
+
+
+
+
+
+
+
+// components for this project
+.component_heading{
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: $black;
+    //letter-spacing: -1px;
+
+}
+
+.component_project{
+    display: block;
+    background: $black;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+   
+
+        .project_img{
+            width: 100%;
+    
+            img{
+                width: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+    
+            }
+        }
+        .project_description{
+            width: 100%;
+            span{
+                display: block;
+                font-size: 2.4rem;
+                color: $black;
+                padding: .4em;
+            }
+        }
+    
+
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+// Strats Navigation Menu
+
+.first_page{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(10vh, auto) minmax(90vh, auto);
+}
+header{
+    background: $white;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    
+}
+
+.nav_div_ul{
+    display: none;
+}
+.nav_icon > svg{
+    font-size: 2.5rem;
+    //color: $white;
+}
+
+
+
+
+
+// Home Section Starts From Here
+
+.home{
+    padding-top: 15vh;
+    background: $black;
+    min-height: 100%;
+    color: $light_gray;
+    
+
+    .home_div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 2;
+        .heading{
+            color: $white;
+        }
+        .home_subHeading{
+            font-size: 1.2rem;
+            color: $light_gray;
+        }
+    }
+
+    .div_social_media{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.9em;
+        padding-top: 20px;
+        svg{
+            font-size: 3rem;
+            transition: transform 400ms ease-in-out;
+            transform: rotate(0);
+            &:hover{
+               transform: rotate(-360deg);
+            }
+            &.fa-facebook{
+                path{
+                    color: hsl(214, 100%, 66%);
+                    
+                }
+            }
+            &.fa-github{
+                path{
+                    color: rgb(255, 255, 255);
+                }
+            }
+            &.fa-twitter{
+                path{
+                    color: hsl(207, 90%, 54%);
+                }
+            }
+            &.fa-at{
+                path{
+                    color: black;
+                }
+            }
+        }
+        
+    }
+    .home_img{
+        width: 8rem;
+    }
+    .div_scroll{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: 5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        
+        .scroll_text{
+            font-size: 1.4rem;
+            padding-bottom: .5em;
+            color: $light_gray;
+        }
+        svg{
+            font-size: 2rem;
+            path{
+                color: white;
+            }
+            animation: scroll_animation 1000ms linear infinite;
+        }
+    }
+}
+
+@keyframes scroll_animation {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(20px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+
+
+
+
+
+
+// About Me section Starts From Here
+
+
+.div_about_me{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10em;
+    padding-bottom: 10em;
+    gap: 20px;
+
+
+    .about_me_imgAndText{
+        @include center_by_flex();
+        flex-direction: column;
+        
+        img{
+            width: 7rem;
+            
+        }
+
+        .component_heading{
+            padding: .5em;
+        }
+
+    }
+
+    .div_about_me_text{
+        background: $white;
+        border-radius: 1em;
+        box-shadow: 1rem 1.2rem 0px 0px #717171;
+        max-width: 735px;
+        font-size: 1.8rem;
+        
+        p{
+            padding: 1em;
+            color: $light_black;
+        }
+    }
+}
+
+
+
+
+
+// Project Section Starts From Here
+
+
+.section_project{
+
+     background: $white;
+    padding: 1em;
+
+    .component_heading{
+        margin-bottom: 30px;
+    }
+
+
+    .div_project{
+        text-align: center;
+        span{
+
+            color: $black;
+        }
+
+
+        .all_projects{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 50px 0;
+           
+
+            
+        }
+        
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Media quires
+
+@media screen and (min-width: 480px){
+
+    
+    .component_project{
+
+        .project_description{
+
+            span{
+                font-size: 2.4rem;
+            }
+        }
+    }
+}
+
+
+@media screen and (min-width: 600px){
+    html{
+        font-size: 14px;
+    }
+    .component_project{
+
+        .project_description{
+
+            span{
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .section_project{
+
+        .div_project{
+
+            .all_projects{
+                grid-template-columns:48% 48%;
+
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media (min-width: 0px) and (orientation: landscape){
+    .home .container{
+        @include center_by_flex();
+        flex-direction: column;
+        
+    }
+    .div_scroll{
+        position: initial !important;
+        bottom: initial !important;
+        left: initial !important;
+        transform: initial !important;
+        padding-top: 20vh;
+        padding-bottom: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+@media screen and (min-width: 750px){
+
+    html{
+        font-size: 12px;
+    }
+    .div_about_me{
+        grid-template-columns: 30% 65%;
+        justify-content: space-between;
+    }
+}
+
+
+@media screen and (min-width: 1024px){
+    
+    .section_project{
+
+        .div_project{
+
+            .all_projects{
+                grid-template-columns: 32% 32% 32%;
+            }
+        }
+    }
+}
