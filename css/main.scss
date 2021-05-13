@@ -1,8 +1,10 @@
 // Variablaes
 $white: rgb(255, 255, 255);
 $black : hsl(0, 0%, 11%);
-$light_black: rgb(85, 85, 85);
-$light_gray: rgb(230, 230, 230);
+$black_for_header: hsl(0, 0%, 19%);
+$light_black: hsl(0, 0%, 33%);
+$gray: hsl(0, 0%, 90%);
+$light_gray: hsl(0, 0%, 93%);
 
 
 // Fonts
@@ -119,6 +121,38 @@ body{
 }
 
 
+// Code for svg icon
+
+
+svg{
+    transition: transform 400ms ease-in-out;
+    transform: rotate(0);
+
+    &:hover{
+        transform: rotate(-360deg);
+     }
+     &.fa-facebook{
+         path{
+             color: $black_for_header;
+             
+         }
+     }
+     &.fa-github{
+         path{
+             color: $black_for_header;
+         }
+     }
+     &.fa-twitter{
+         path{
+             color: $black_for_header;
+         }
+     }
+     &.fa-at{
+         path{
+             color: $black_for_header;
+         }
+     }
+}
 
 
 
@@ -127,47 +161,102 @@ body{
 
 
 
-
-
-// Strats Navigation Menu
+// First Page
 
 .first_page{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: minmax(10vh, auto) minmax(90vh, auto);
 }
-header{
-    background: $white;
-    width: 100%;
-    z-index: 999;
-}
 
-.nav{
+
+
+// Code For Navigation, Code For Header
+    
+    
+header{
+    background: white;
+    color: $black_for_header!important;
+    font-size:1.4rem;
+    padding: 3vh 0;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    box-shadow: 1px -3px 20px 0px #9a9a9a;
+}
+    
+header .container{
+    display: flex;
+    flex-direction: column;
+}
+.logoAndIcon{
     display: flex;
     justify-content: space-between;
+}
+.navbar_link > a{
+    color: hsl(0, 0%, 19%) !important;
+}
+.logo{
+    font-size: 2.8rem;
     align-items: center;
-    height: 10vh;
+}
+.navbar_toggle{
+    font-size: 2.8rem;
+    align-self: center;
+    .fa-bars{
+        transform: rotate(0);
+    }
+}
+.navbar_items_social{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+    font-size: 2.7rem;
+
+
+    // & .navbar_link .fa-github{
+    //     path{
+    //         color: black;
+    //     }
+    // }
+}
+
+
+
+.div_items{
+    display: none;
+    padding-top: 1rem;
+}
+.navbar_items_first li > a{
+    padding: .9em .4em;
+    border-bottom: 1px solid rgb(219, 219, 219);
+    display: block;
+    transition: 300ms;
+    font-size: 2rem;
+}
+.navbar_items_first li > a:hover{
+    background: rgba(197, 197, 197, 0.281);
     
 }
 
-.nav_div_ul{
-    display: none;
-}
-.nav_icon > svg{
-    font-size: 2.5rem;
-    //color: $white;
+.nav_show{
+    display: initial;
 }
 
 
 
 
 
-// Home Section Starts From Here
+
+
+// Home Section Starts From Here , Code For Home
 
 .home{
     padding-top: 15vh;
     background: $black;
-    min-height: 100%;
+    min-height: 100vh;
     color: $light_gray;
     
 
@@ -202,7 +291,7 @@ header{
             }
             &.fa-facebook{
                 path{
-                    color: hsl(214, 100%, 66%);
+                    color: hsl(0, 0%, 100%);
                     
                 }
             }
@@ -213,12 +302,12 @@ header{
             }
             &.fa-twitter{
                 path{
-                    color: hsl(207, 90%, 54%);
+                    color: hsl(0, 0%, 100%);
                 }
             }
             &.fa-at{
                 path{
-                    color: black;
+                    color: rgb(255, 255, 255);
                 }
             }
         }
@@ -386,6 +475,28 @@ header{
 
 // Media quires
 
+
+
+@media (min-width: 0px) and (orientation: landscape){
+    .home .container{
+        @include center_by_flex();
+        flex-direction: column;
+        
+    }
+    .div_scroll{
+        position: initial !important;
+        bottom: initial !important;
+        left: initial !important;
+        transform: initial !important;
+        padding-top: 20vh;
+        padding-bottom: 50px;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
 @media screen and (min-width: 480px){
 
     
@@ -403,7 +514,7 @@ header{
 
 @media screen and (min-width: 600px){
     html{
-        font-size: 14px;
+        font-size: 11px;
     }
     .component_project{
 
@@ -427,24 +538,7 @@ header{
     }
 }
 
-@media (min-width: 0px) and (orientation: landscape){
-    .home .container{
-        @include center_by_flex();
-        flex-direction: column;
-        
-    }
-    .div_scroll{
-        position: initial !important;
-        bottom: initial !important;
-        left: initial !important;
-        transform: initial !important;
-        padding-top: 20vh;
-        padding-bottom: 50px;
-        align-items: center;
-        justify-content: center;
-    }
 
-}
 
 @media screen and (min-width: 750px){
 
@@ -456,6 +550,78 @@ header{
         justify-content: space-between;
     }
 }
+
+
+
+
+@media screen and (min-width: 800px){
+    html{
+        font-size: 14px;
+    }
+
+
+    // This code Is for header Section
+    .navbar_toggle{
+        display: none;
+    }
+    header .container{
+        flex-direction: row;
+    }
+    .div_items{
+        display: flex;
+        margin-left: auto;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        
+    }
+    .navbar_items{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar_itmes .navbar_link{
+        justify-content: center;
+        align-items: center;
+    }
+    .navbar_items_first{
+        margin-right: 2rem;
+    }
+    .navbar_items_first li > a{
+        padding: 100% .5em;
+        background: rgba(99, 30, 30, 0);
+        display: initial;
+        border: none;
+        font-size: 1.6rem;
+    }
+    .navbar_items_first li > a:hover{
+        background: rgba(197, 197, 197, 0.281);
+        color: rgb(255, 255, 255);
+    }
+    .navbar_items_social{
+        font-size: 1.8rem;
+        margin: 0;
+    }
+    .navbar_items_social li > a{
+        margin-left: 1rem;
+    }
+    
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 1024px){
