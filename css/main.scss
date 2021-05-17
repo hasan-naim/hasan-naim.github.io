@@ -4,7 +4,7 @@ $black : hsl(0, 0%, 11%);
 $black_for_header: hsl(0, 0%, 19%);
 $light_black: hsl(0, 0%, 33%);
 $gray: hsl(0, 0%, 90%);
-$light_gray: hsl(0, 0%, 93%);
+$light_gray: hsl(0, 0%, 95%);
 
 
 // Fonts
@@ -88,12 +88,17 @@ body{
 
 .component_project{
     display: block;
-    background: $black;
+    background: $white;
     width: 100%;
     border-radius: 10px;
     overflow: hidden;
     cursor: pointer;
-   
+    box-shadow: 1px 2px 4px 0px grey;
+    transition: 300ms;
+
+    &:hover{
+        box-shadow: 4px 5px 11px 0px #797979;
+    }
 
         .project_img{
             width: 100%;
@@ -107,11 +112,18 @@ body{
         }
         .project_description{
             width: 100%;
-            span{
+            h2{
                 display: block;
                 font-size: 2.4rem;
                 color: $black;
                 padding: .4em;
+                font-weight: 500;
+            }
+            p{
+                padding: 0 .5em .5em .5em;
+                text-align: left;
+                font-size: 1.6rem;
+                color: $light_black;
             }
         }
     
@@ -163,11 +175,7 @@ svg{
 
 // First Page
 
-.first_page{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: minmax(10vh, auto) minmax(90vh, auto);
-}
+
 
 
 
@@ -183,7 +191,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 9999;
-    box-shadow: 1px -3px 20px 0px #9a9a9a;
+    box-shadow: 1px -3px 20px 0px hsla(0, 0%, 11%, 0.478);
 }
     
 header .container{
@@ -257,7 +265,7 @@ header .container{
     padding-top: 15vh;
     background: $black;
     min-height: 100vh;
-    color: $light_gray;
+    color: $gray;
     
 
     .home_div{
@@ -272,7 +280,7 @@ header .container{
         }
         .home_subHeading{
             font-size: 1.2rem;
-            color: $light_gray;
+            color: $gray;
         }
     }
 
@@ -392,7 +400,6 @@ header .container{
         background: $white;
         border-radius: 1em;
         box-shadow: 1rem 1.2rem 0px 0px #717171;
-        max-width: 735px;
         font-size: 1.8rem;
         
         p{
@@ -406,6 +413,31 @@ header .container{
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Project Section Starts From Here
 
 
@@ -413,6 +445,7 @@ header .container{
 
      background: $white;
     padding: 1em;
+    padding-bottom: 3em;
 
     .component_heading{
         margin-bottom: 30px;
@@ -449,7 +482,26 @@ header .container{
 
 
 
+// Footer sectin starts From here
 
+
+
+
+footer{
+    background: $black;
+    color: white;
+    .footer_div{
+        text-align: center;
+        font-size: 1.2rem;
+        padding: .5em 0;
+        p{
+            color: $light_gray;
+            span{
+                color: hsl(0, 0%, 67%);
+            }
+        }
+    }
+}
 
 
 
@@ -500,15 +552,7 @@ header .container{
 @media screen and (min-width: 480px){
 
     
-    .component_project{
-
-        .project_description{
-
-            span{
-                font-size: 2.4rem;
-            }
-        }
-    }
+    
 }
 
 
@@ -634,5 +678,42 @@ header .container{
                 grid-template-columns: 32% 32% 32%;
             }
         }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    html{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1900px) {
+    html{
+        font-size: 19px;
+    }
+}
+@media screen and (min-width: 2200px){
+    html{
+        font-size: 22px;
+    }
+}
+@media screen and (min-width: 2500px){
+    html{
+        font-size: 27px;
+    }
+}
+@media screen and (min-width: 3000px){
+    html{
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 3500px){
+    html{
+        font-size: 31px;
+    }
+}
+@media screen and (min-width: 4000px){
+    html{
+        font-size: 35px;
     }
 }

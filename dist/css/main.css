@@ -29,7 +29,7 @@ html {
 }
 
 body {
-  background: #ededed;
+  background: #f2f2f2;
   font-family: Open_sans;
 }
 
@@ -57,11 +57,20 @@ body {
 
 .component_project {
   display: block;
-  background: #1c1c1c;
+  background: white;
   width: 100%;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
+  -webkit-box-shadow: 1px 2px 4px 0px grey;
+          box-shadow: 1px 2px 4px 0px grey;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+}
+
+.component_project:hover {
+  -webkit-box-shadow: 4px 5px 11px 0px #797979;
+          box-shadow: 4px 5px 11px 0px #797979;
 }
 
 .component_project .project_img {
@@ -78,11 +87,19 @@ body {
   width: 100%;
 }
 
-.component_project .project_description span {
+.component_project .project_description h2 {
   display: block;
   font-size: 2.4rem;
   color: #1c1c1c;
   padding: .4em;
+  font-weight: 500;
+}
+
+.component_project .project_description p {
+  padding: 0 .5em .5em .5em;
+  text-align: left;
+  font-size: 1.6rem;
+  color: #545454;
 }
 
 svg {
@@ -115,15 +132,6 @@ svg.fa-at path {
   color: #303030;
 }
 
-.first_page {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: minmax(10vh, auto) minmax(90vh, auto);
-      grid-template-rows: minmax(10vh, auto) minmax(90vh, auto);
-}
-
 header {
   background: white;
   color: #303030 !important;
@@ -134,8 +142,8 @@ header {
   position: sticky;
   top: 0;
   z-index: 9999;
-  -webkit-box-shadow: 1px -3px 20px 0px #9a9a9a;
-          box-shadow: 1px -3px 20px 0px #9a9a9a;
+  -webkit-box-shadow: 1px -3px 20px 0px rgba(28, 28, 28, 0.478);
+          box-shadow: 1px -3px 20px 0px rgba(28, 28, 28, 0.478);
 }
 
 header .container {
@@ -221,7 +229,7 @@ header .container {
   padding-top: 15vh;
   background: #1c1c1c;
   min-height: 100vh;
-  color: #ededed;
+  color: #e6e6e6;
 }
 
 .home .home_div {
@@ -248,7 +256,7 @@ header .container {
 
 .home .home_div .home_subHeading {
   font-size: 1.2rem;
-  color: #ededed;
+  color: #e6e6e6;
 }
 
 .home .div_social_media {
@@ -325,7 +333,7 @@ header .container {
 .home .div_scroll .scroll_text {
   font-size: 1.4rem;
   padding-bottom: .5em;
-  color: #ededed;
+  color: #f2f2f2;
 }
 
 .home .div_scroll svg {
@@ -413,7 +421,6 @@ header .container {
   border-radius: 1em;
   -webkit-box-shadow: 1rem 1.2rem 0px 0px #717171;
           box-shadow: 1rem 1.2rem 0px 0px #717171;
-  max-width: 735px;
   font-size: 1.8rem;
 }
 
@@ -425,6 +432,7 @@ header .container {
 .section_project {
   background: white;
   padding: 1em;
+  padding-bottom: 3em;
 }
 
 .section_project .component_heading {
@@ -446,6 +454,25 @@ header .container {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 50px 0;
+}
+
+footer {
+  background: #1c1c1c;
+  color: white;
+}
+
+footer .footer_div {
+  text-align: center;
+  font-size: 1.2rem;
+  padding: .5em 0;
+}
+
+footer .footer_div p {
+  color: #f2f2f2;
+}
+
+footer .footer_div p span {
+  color: #ababab;
 }
 
 @media (min-width: 0px) and (orientation: landscape) {
@@ -478,12 +505,6 @@ header .container {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .component_project .project_description span {
-    font-size: 2.4rem;
   }
 }
 
@@ -588,6 +609,48 @@ header .container {
   .section_project .div_project .all_projects {
     -ms-grid-columns: 32% 32% 32%;
         grid-template-columns: 32% 32% 32%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1900px) {
+  html {
+    font-size: 19px;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  html {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 2500px) {
+  html {
+    font-size: 27px;
+  }
+}
+
+@media screen and (min-width: 3000px) {
+  html {
+    font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 3500px) {
+  html {
+    font-size: 31px;
+  }
+}
+
+@media screen and (min-width: 4000px) {
+  html {
+    font-size: 35px;
   }
 }
 /*# sourceMappingURL=main.css.map */
