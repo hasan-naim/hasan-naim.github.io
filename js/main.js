@@ -14,21 +14,65 @@ toggleIcon.addEventListener("click", classToggle);
 
 // Code for Hide Navigation
 
-const everySectionWithoutHeader = [ document.querySelector("#about"),
+const bodyWithoutHeader = [
                 document.querySelector("#home"),
-                document.querySelector("#project")
+                document.querySelector("#about"),
+                document.querySelector("#project"),
+                document.querySelector("footer")
             ];
 
 const navbarLinks = document.querySelectorAll(".navbar_links")
 
+
+// Remove Function
 const removeClassFromHeader = () => {
-    nav.classList.remove("nav_show")  
+    nav.classList.remove("nav_show")
     }
 
-everySectionWithoutHeader.forEach((section) => {
+bodyWithoutHeader.forEach( section => {
     section.addEventListener("click", removeClassFromHeader)
 })
 
 navbarLinks.forEach( element => {
     element.addEventListener("click", removeClassFromHeader)
 })
+
+
+
+
+// Code for About Me in details
+
+
+const about_me_hide_icon = document.querySelector(".about_me_icon")
+
+const about_me_in_details_section = document.querySelector(".about_me_in_details")
+
+const button_to_show_about_me = document.querySelector(".read_in_details")
+
+function add_display_hide_class(){
+    about_me_in_details_section.classList.add("display_hide")
+    bodyWithoutHeader.forEach( section => {
+        section.classList.remove("display_hide")
+    })
+}
+function remove_display_hide_class(){
+    about_me_in_details_section.classList.remove("display_hide")
+    bodyWithoutHeader.forEach( section => {
+        section.classList.add("display_hide")
+    })
+}
+
+button_to_show_about_me.addEventListener("click", remove_display_hide_class)
+
+about_me_hide_icon.addEventListener("click", add_display_hide_class)
+
+// hide about me details if I click header links
+
+navbarLinks.forEach( element => {
+    element.addEventListener("click", add_display_hide_class)
+})
+
+
+
+
+

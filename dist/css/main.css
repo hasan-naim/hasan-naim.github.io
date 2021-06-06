@@ -17,7 +17,7 @@ html {
   font-size: 10px;
 }
 
-* {
+:where(*) {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -28,9 +28,9 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+:where(body) {
   background: #f2f2f2;
-  font-family: Open_sans;
+  font-family: Open_sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .container {
@@ -226,13 +226,16 @@ header .container {
 }
 
 .home {
-  padding-top: 15vh;
   background: #1c1c1c;
-  min-height: 100vh;
+  height: 100vh;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
   color: #e6e6e6;
 }
 
 .home .home_div {
+  padding-top: 15vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -427,6 +430,67 @@ header .container {
 .div_about_me .div_about_me_text p {
   padding: 1em;
   color: #545454;
+}
+
+.div_about_me .div_about_me_text .read_in_details {
+  color: #039eba;
+}
+
+.div_about_me .div_about_me_text .read_in_details:hover {
+  color: #00ccf0;
+  text-decoration: underline;
+}
+
+.about_me_in_details {
+  background: #f2f2f2;
+  width: 100%;
+  z-index: 100;
+}
+
+.about_me_in_details .about_me_header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5em 0 .4em 0;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #545454;
+  font-size: 3.4rem;
+  color: #545454;
+}
+
+.about_me_in_details svg {
+  font-size: 3.4rem;
+}
+
+.about_me_in_details svg:hover {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.about_me_in_details svg path {
+  color: #545454;
+}
+
+.about_me_in_details .heading {
+  color: #545454;
+  font-size: 3.4rem;
+}
+
+.about_me_in_details p {
+  font-size: 1.8rem;
+  color: #545454;
+  padding-bottom: 1.3em;
+  line-height: 3rem;
+}
+
+.display_hide {
+  display: none;
 }
 
 .section_project {
