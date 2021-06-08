@@ -539,6 +539,31 @@ footer .footer_div p span {
   color: #ababab;
 }
 
+::-webkit-scrollbar {
+  width: 13px;
+  height: 13px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #545454;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  background-color: #1c1c1c;
+}
+
+::-webkit-scrollbar-track {
+  background: #e6e6e6;
+  border-radius: 10px;
+  -webkit-box-shadow: inset 7px 10px 12px #f0f0f0;
+          box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
 @media (min-width: 0px) and (orientation: landscape) {
   .home .container {
     display: -webkit-box;

@@ -567,7 +567,28 @@ footer{
 
 
 
+// Css for custom scrollbar
 
+::-webkit-scrollbar {
+    width: 13px;
+    height: 13px;
+   }
+::-webkit-scrollbar-thumb {
+    background-color: $light_black;
+    transition: 300ms;
+    border-radius: 10px;
+    &:hover{
+        transition: 300ms;
+        background-color: $black;
+    }
+}
+
+   
+::-webkit-scrollbar-track{
+    background: #e6e6e6;
+    border-radius: 10px;
+    box-shadow: inset 7px 10px 12px #f0f0f0;
+}
 
 
 
