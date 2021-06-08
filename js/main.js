@@ -92,12 +92,15 @@ everySectionWithoutPreloader.forEach(section => {
 
 
 function hide_preloaderDiv(){
-    // add display:none to the preloader div
-    preloader.classList.add("display_hide")
-    // everysection have to show when page is ready
-    everySectionWithoutPreloader.forEach(section => {
-            section.classList.remove("display_hide")
-    })
+    setTimeout(() => {
+
+        // add display:none to the preloader div
+        preloader.classList.add("display_hide")
+        // everysection have to show when page is ready
+        everySectionWithoutPreloader.forEach(section => {
+                section.classList.remove("display_hide")
+        })
+    }, 1000);
 }
 
 
