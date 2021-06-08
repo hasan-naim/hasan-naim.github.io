@@ -73,6 +73,39 @@ navbarLinks.forEach( element => {
 })
 
 
+// Code For Preloader 
+
+
+const preloader = document.querySelector(".preloader")
+const body = document.querySelector("body")
+const everySectionWithoutPreloader = [
+                document.querySelector("header"),
+                document.querySelector("#home"),
+                document.querySelector("#about"),
+                document.querySelector("#project"),
+                document.querySelector("footer")
+]
+// Everything hided when page is not loaded yet
+everySectionWithoutPreloader.forEach(section => {
+    section.classList.add("display_hide")
+})
+
+
+function hide_preloaderDiv(){
+    // add display:none to the preloader div
+    preloader.classList.add("display_hide")
+    // everysection have to show when page is ready
+    everySectionWithoutPreloader.forEach(section => {
+            section.classList.remove("display_hide")
+    })
+}
+
+
+
+window.addEventListener("load", hide_preloaderDiv)
+
+
+
 
 
 
