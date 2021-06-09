@@ -489,6 +489,11 @@ header .container {
   line-height: 3rem;
 }
 
+.about_me_in_details .description_about_me {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
 .section_project {
   background: white;
   padding: 1em;
@@ -809,6 +814,10 @@ footer .footer_div p span {
   }
 }
 
+.display_hide {
+  display: none;
+}
+
 @media screen and (min-width: 1024px) {
   .section_project .div_project .all_projects {
     -ms-grid-columns: 32% 32% 32%;
@@ -825,6 +834,9 @@ footer .footer_div p span {
 @media screen and (min-width: 1900px) {
   html {
     font-size: 19px;
+  }
+  .description_about_me {
+    max-width: 800px;
   }
 }
 
@@ -844,6 +856,9 @@ footer .footer_div p span {
   html {
     font-size: 30px;
   }
+  .description_about_me {
+    max-width: 900px;
+  }
 }
 
 @media screen and (min-width: 3500px) {
@@ -856,9 +871,8 @@ footer .footer_div p span {
   html {
     font-size: 35px;
   }
-}
-
-.display_hide {
-  display: none;
+  .description_about_me {
+    max-width: 1100px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

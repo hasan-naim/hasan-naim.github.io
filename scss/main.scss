@@ -469,6 +469,10 @@ header .container{
         padding-bottom: 1.3em;
         line-height: 3rem;
     }
+    .description_about_me{
+        max-width: 700px;
+        margin: 0 auto;
+    }
 
 
 
@@ -542,7 +546,7 @@ header .container{
 
 
 
-// Footer sectin starts From here
+// Footer section starts From here
 
 
 
@@ -805,8 +809,10 @@ footer{
         margin-left: 1rem;
     }
 }
-
-
+// Class selector for display hide
+.display_hide{
+    display: none;
+}
 
 
 @media screen and (min-width: 1024px){
@@ -834,6 +840,9 @@ footer{
     html{
         font-size: 19px;
     }
+    .description_about_me{
+        max-width: 800px;
+    }
 }
 @media screen and (min-width: 2200px){
     html{
@@ -850,6 +859,9 @@ footer{
     html{
         font-size: 30px;
     }
+    .description_about_me{
+        max-width: 900px;
+    }
 }
 @media screen and (min-width: 3500px){
     html{
@@ -860,7 +872,7 @@ footer{
     html{
         font-size: 35px;
     }
-}
-.display_hide{
-    display: none;
+    .description_about_me{
+        max-width: 1100px;
+    }
 }
