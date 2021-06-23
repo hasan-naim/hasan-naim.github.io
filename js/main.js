@@ -18,7 +18,7 @@ const bodyWithoutHeader = [
                 document.querySelector("#home"),
                 document.querySelector("#about"),
                 document.querySelector("#project"),
-                document.querySelector("footer")
+                document.querySelector("#skill")
             ];
 
 const navbarLinks = document.querySelectorAll(".navbar_links")

@@ -27,7 +27,7 @@ $light_gray: hsl(0, 0%, 95%);
 html{
     font-size: 10px;
 }
-*{
+:where(*){
     
     margin: 0;
     padding: 0;
@@ -540,6 +540,26 @@ header .container{
 }
 
 
+
+// Code for Skill section
+
+
+.div_skill{
+    .component_heading{
+        text-align: center;
+    }
+    img{
+        max-width: 2.5rem;
+    }
+    ul{
+        li{  
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            font-size: 1.8rem;
+        }
+    }
+}
 
 
 

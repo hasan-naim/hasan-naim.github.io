@@ -17,7 +17,7 @@ html {
   font-size: 10px;
 }
 
-* {
+:where(*) {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
@@ -519,6 +519,26 @@ header .container {
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   grid-gap: 50px 0;
+}
+
+.div_skill .component_heading {
+  text-align: center;
+}
+
+.div_skill img {
+  max-width: 2.5rem;
+}
+
+.div_skill ul li {
+  list-style-type: circles;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
 }
 
 footer {
