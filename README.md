@@ -9,7 +9,8 @@
 * how to work with git and github 
 * how to deploy a website 
 * how to write readme file 😅
+<br>
 _and many more_ 
 
 
-[visit the website](https://hasan-naim.github.io)
+[![](/img/myWebsite.png)](https://hasan-naim.github.io)
