@@ -1,8 +1,12 @@
 ## Welcome To My Portfolio Website Repo  😊 
+
+<!-- what i used to build this website -->
 ### What I used to build this website
 * Html ([the file](https://github.com/hasan-naim/hasan-naim.github.io/blob/main/index.html "go to the file"))
 * Scss ([the file](https://github.com/hasan-naim/hasan-naim.github.io/blob/main/scss/main.scss "go to the file"))
 * Javascript ([the file](https://github.com/hasan-naim/hasan-naim.github.io/blob/main/js/main.js "go to the file"))
+
+
 ### What I learned from this project
 * Responsive Design
 * Scss
@@ -11,6 +15,10 @@
 * how to write readme file 😅
 <br>
 _and many more_ 
+<br>
+<br>
 
+<!-- visit the website -->
 
+### [visit my website](https://hasan-naim.github.io)
 [![](/img/myWebsite.png)](https://hasan-naim.github.io)
